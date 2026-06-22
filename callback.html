@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>TikTok Auth Callback</title></head>
+<body>
+<h1>認証コード</h1>
+<p>以下のコードをターミナルに貼り付けてください：</p>
+<p id="code" style="font-size:18px;font-weight:bold;word-break:break-all;"></p>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  document.getElementById('code').textContent = code || 'codeが見つかりません';
+</script>
+</body>
+</html>
